@@ -10,7 +10,6 @@ import RealmSwift
 class Item: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var userId: String
-    
     @Persisted var name: String
     
     convenience init(name: String, userId: String? = nil) {

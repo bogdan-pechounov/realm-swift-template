@@ -11,7 +11,7 @@ import RealmSwift
 struct ItemsView: View {
     
     @ObservedResults(Item.self) var items
-    
+        
     var body: some View {
         if items.isEmpty {
             Text("No items")
