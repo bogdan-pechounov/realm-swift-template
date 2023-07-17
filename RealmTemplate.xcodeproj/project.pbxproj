@@ -22,6 +22,9 @@
 		4387E6FB2A60744200F02AB7 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E6FA2A60744200F02AB7 /* Realm.swift */; };
 		4387E6FF2A607B4B00F02AB7 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E6FE2A607B4B00F02AB7 /* MainScreen.swift */; };
 		4387E7022A607F7600F02AB7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E7012A607F7600F02AB7 /* LoginView.swift */; };
+		4387E7282A64485900F02AB7 /* DeleteAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E7272A64485900F02AB7 /* DeleteAccount.swift */; };
+		4387E72B2A64C98300F02AB7 /* LoginWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E72A2A64C98300F02AB7 /* LoginWithApple.swift */; };
+		4387E72D2A64CB6E00F02AB7 /* LoginAnonymous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E72C2A64CB6E00F02AB7 /* LoginAnonymous.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,10 @@
 		4387E6FA2A60744200F02AB7 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		4387E6FE2A607B4B00F02AB7 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		4387E7012A607F7600F02AB7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4387E7272A64485900F02AB7 /* DeleteAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccount.swift; sourceTree = "<group>"; };
+		4387E7292A646F2A00F02AB7 /* RealmTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealmTemplate.entitlements; sourceTree = "<group>"; };
+		4387E72A2A64C98300F02AB7 /* LoginWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithApple.swift; sourceTree = "<group>"; };
+		4387E72C2A64CB6E00F02AB7 /* LoginAnonymous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnonymous.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +80,7 @@
 		4387E6D52A603FEB00F02AB7 /* RealmTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				4387E7292A646F2A00F02AB7 /* RealmTemplate.entitlements */,
 				4387E6F52A606FF200F02AB7 /* Utils */,
 				4387E6E92A60437A00F02AB7 /* Models */,
 				4387E6EA2A60439400F02AB7 /* Views */,
@@ -126,6 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				4387E7012A607F7600F02AB7 /* LoginView.swift */,
+				4387E7272A64485900F02AB7 /* DeleteAccount.swift */,
+				4387E72C2A64CB6E00F02AB7 /* LoginAnonymous.swift */,
+				4387E72A2A64C98300F02AB7 /* LoginWithApple.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -212,12 +223,15 @@
 				4387E6FF2A607B4B00F02AB7 /* MainScreen.swift in Sources */,
 				4387E6EC2A6043BE00F02AB7 /* Item.swift in Sources */,
 				4387E6D72A603FEB00F02AB7 /* RealmTemplateApp.swift in Sources */,
+				4387E72D2A64CB6E00F02AB7 /* LoginAnonymous.swift in Sources */,
 				4387E6F42A6054CF00F02AB7 /* ItemView.swift in Sources */,
 				4387E6F72A60708300F02AB7 /* Config.swift in Sources */,
 				4387E6F22A6052BA00F02AB7 /* ItemsView.swift in Sources */,
 				4387E7022A607F7600F02AB7 /* LoginView.swift in Sources */,
+				4387E7282A64485900F02AB7 /* DeleteAccount.swift in Sources */,
 				4387E6EE2A604C7A00F02AB7 /* AddItemView.swift in Sources */,
 				4387E6FB2A60744200F02AB7 /* Realm.swift in Sources */,
+				4387E72B2A64C98300F02AB7 /* LoginWithApple.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +357,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RealmTemplate/RealmTemplate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RealmTemplate/Preview Content\"";
@@ -373,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RealmTemplate/RealmTemplate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RealmTemplate/Preview Content\"";

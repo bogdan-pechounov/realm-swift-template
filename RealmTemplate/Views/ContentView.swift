@@ -33,6 +33,7 @@ struct MainScreenSync: View{
         VStack {
             MainScreen()
             Text(app.currentUser?.description ?? "not logged in")
+            DeleteAccount()
         }
         .onAppear {
             if let localRealm = try? Realm(), let user = app.currentUser {

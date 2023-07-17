@@ -7,36 +7,41 @@
 
 import SwiftUI
 import RealmSwift
+import AuthenticationServices
 
 struct LoginView: View {
     @EnvironmentObject var app: RealmSwift.App
+    
+    @State private var isPresented = false
 
     var body: some View {
         if let user = app.currentUser {
             Button {
-                Task {
-                    do {
-                        try await user.logOut()
-                        print("User logged out")
-                    } catch {
-                        print("Error logging out: \(error.localizedDescription)")
-                    }
-                }
+                logout(user)
             } label: {
                 Text("Logout")
             }
         } else {
             Button {
-                Task {
-                    do {
-                        let user = try await app.login(credentials: .anonymous)
-                        print("Logged in as user with id: \(user.id)")
-                    } catch {
-                        print("Failed to log in: \(error.localizedDescription)")
-                    }
-                }
+                isPresented = true
             } label: {
                 Text("Login")
+            }
+            .sheet(isPresented: $isPresented) {
+                LoginAnonymous()
+                LoginWithApple()
+            }
+        }
+    }
+    
+    
+    func logout(_ user: User){
+        Task {
+            do {
+                try await user.logOut()
+                print("User logged out")
+            } catch {
+                print("Error logging out: \(error.localizedDescription)")
             }
         }
     }
