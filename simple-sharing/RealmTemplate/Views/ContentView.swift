@@ -13,9 +13,9 @@ struct ContentView: View {
     @ObservedObject var app = Realm.app
     
     var body: some View {
-        if let config = app.createFlexibleConfiguration() {
+        if let user = app.currentUser {
             MainScreenSync()
-                .environment(\.realmConfiguration, config)
+                .environment(\.realmConfiguration, user.createFlexibleConfiguration())
                 .environmentObject(app)
         } else {
             MainScreen()

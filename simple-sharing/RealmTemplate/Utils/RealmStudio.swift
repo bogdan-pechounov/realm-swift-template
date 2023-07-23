@@ -9,7 +9,6 @@ import RealmSwift
 
 
 func printRealmStudioPath(){
-    // Get on-disk location of the default Realm
     if let realm = try? Realm() {
         print("REALM STUDIO PATH:", realm.configuration.fileURL!)
     }

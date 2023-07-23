@@ -10,13 +10,10 @@ import SwiftUI
 @main
 struct RealmTemplateApp: App {
         
-    init(){
-        printRealmStudioPath()
-    }
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                
         }
     }
 }

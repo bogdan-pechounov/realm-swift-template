@@ -25,6 +25,8 @@
 		4387E7282A64485900F02AB7 /* DeleteAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E7272A64485900F02AB7 /* DeleteAccount.swift */; };
 		4387E72B2A64C98300F02AB7 /* LoginWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E72A2A64C98300F02AB7 /* LoginWithApple.swift */; };
 		4387E72D2A64CB6E00F02AB7 /* LoginAnonymous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E72C2A64CB6E00F02AB7 /* LoginAnonymous.swift */; };
+		439244712A6734CB0029EA67 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439244702A6734CB0029EA67 /* ActivityView.swift */; };
+		439244732A676D270029EA67 /* SharedWithMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439244722A676D270029EA67 /* SharedWithMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		4387E7292A646F2A00F02AB7 /* RealmTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealmTemplate.entitlements; sourceTree = "<group>"; };
 		4387E72A2A64C98300F02AB7 /* LoginWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithApple.swift; sourceTree = "<group>"; };
 		4387E72C2A64CB6E00F02AB7 /* LoginAnonymous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnonymous.swift; sourceTree = "<group>"; };
+		439244702A6734CB0029EA67 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		439244722A676D270029EA67 /* SharedWithMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedWithMe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				4387E6EB2A6043BE00F02AB7 /* Item.swift */,
+				439244722A676D270029EA67 /* SharedWithMe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 		4387E6EA2A60439400F02AB7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4392446F2A6734AC0029EA67 /* Share */,
 				4387E7002A607F6600F02AB7 /* Auth */,
 				4387E6D82A603FEB00F02AB7 /* ContentView.swift */,
 				4387E6FE2A607B4B00F02AB7 /* MainScreen.swift */,
@@ -139,6 +145,14 @@
 				4387E72A2A64C98300F02AB7 /* LoginWithApple.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		4392446F2A6734AC0029EA67 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				439244702A6734CB0029EA67 /* ActivityView.swift */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,12 +234,14 @@
 			files = (
 				4387E6F02A6050D100F02AB7 /* RealmStudio.swift in Sources */,
 				4387E6D92A603FEB00F02AB7 /* ContentView.swift in Sources */,
+				439244732A676D270029EA67 /* SharedWithMe.swift in Sources */,
 				4387E6FF2A607B4B00F02AB7 /* MainScreen.swift in Sources */,
 				4387E6EC2A6043BE00F02AB7 /* Item.swift in Sources */,
 				4387E6D72A603FEB00F02AB7 /* RealmTemplateApp.swift in Sources */,
 				4387E72D2A64CB6E00F02AB7 /* LoginAnonymous.swift in Sources */,
 				4387E6F42A6054CF00F02AB7 /* ItemView.swift in Sources */,
 				4387E6F72A60708300F02AB7 /* Config.swift in Sources */,
+				439244712A6734CB0029EA67 /* ActivityView.swift in Sources */,
 				4387E6F22A6052BA00F02AB7 /* ItemsView.swift in Sources */,
 				4387E7022A607F7600F02AB7 /* LoginView.swift in Sources */,
 				4387E7282A64485900F02AB7 /* DeleteAccount.swift in Sources */,

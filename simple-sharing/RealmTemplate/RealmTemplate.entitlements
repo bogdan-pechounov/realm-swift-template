@@ -6,5 +6,10 @@
 	<array>
 		<string>Default</string>
 	</array>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:master--grand-begonia-b39713.netlify.app</string>
+		<string>webcredentials:master--grand-begonia-b39713.netlify.app</string>
+	</array>
 </dict>
 </plist>

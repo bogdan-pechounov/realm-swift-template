@@ -12,18 +12,26 @@ extension Realm {
     static let app = RealmSwift.App(id: Config.APP_ID)
 }
 
-extension App {
-    func createFlexibleConfiguration() -> Realm.Configuration? {
-        if let user = self.currentUser {
-            let config = user.flexibleSyncConfiguration(initialSubscriptions: { subs in
-                if subs.first(named: "user_items")  == nil {
-                    subs.append(QuerySubscription<Item>(name: "user_items") {
-                        $0.userId == user.id
-                    })
-                }
-            })
-            return config
-        }
-        return nil
+extension User {
+    func createFlexibleConfiguration() -> Realm.Configuration {
+        let config = self.flexibleSyncConfiguration(initialSubscriptions: { subs in
+            if subs.first(named: "user_items")  == nil {
+                subs.append(QuerySubscription<Item>(name: "user_items") {
+                    $0.userId == self.id
+                })
+            }
+            
+            if subs.first(named: "shared_with_me")  == nil {
+                subs.append(QuerySubscription<SharedWithMe>(name: "shared_with_me") {
+                    $0.userId == self.id
+                })
+                
+//                subs.append(QuerySubscription<Item>(name: "shared_items") {
+//                    $0.id == SharedWithMe.item.id
+//                })
+            }
+            
+        })
+        return config
     }
 }
