@@ -134,9 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				4387E7012A607F7600F02AB7 /* LoginView.swift */,
-				4387E7272A64485900F02AB7 /* DeleteAccount.swift */,
 				4387E72C2A64CB6E00F02AB7 /* LoginAnonymous.swift */,
 				4387E72A2A64C98300F02AB7 /* LoginWithApple.swift */,
+				4387E7272A64485900F02AB7 /* DeleteAccount.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";

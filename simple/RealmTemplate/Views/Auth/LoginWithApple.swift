@@ -29,7 +29,7 @@ struct LoginWithApple: View {
                     if let idToken = credential.identityToken {
                         if let idTokenString = String(data: idToken, encoding: .utf8) {
                             loginWithApple(idToken: idTokenString)
-                            dismiss()
+                            dismiss() // TODO
                         }
                     }
                 default:

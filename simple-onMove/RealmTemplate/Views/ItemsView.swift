@@ -20,54 +20,56 @@ struct ItemsView: View {
                 ItemView(item: item)
             }
             .onDelete(perform: $items.remove)
-            .onMove  { indexSet, destination in
-                for index in indexSet { // not sure how we can move more than one item at a time
-                    let itemToMove = items[index]
-                    let orderAtDestination = orderAtDestination(destination)
-                    
-                    // move item down
-                    if itemToMove.order < orderAtDestination {
-                        let start = itemToMove.order + 1
-                        let end = orderAtDestination - 1
-                        let itemsToDisplace = items.where { item in
-                            item.order.contains(start...end)
-                        }
-                        // displace upwards
-                        itemsToDisplace.forEach { item in
-                            if let item = item.thaw(){ // is there a way to use $items[index].order += 1
-                                try! realm.write { // safe to catch exceptions?
-                                    item.order -= 1
-                                }
-                            }
-                        }
-                        // save
-                        if let itemToMove = itemToMove.thaw() {
-                            try! realm.write {
-                                 itemToMove.order = end
-                            }
+            .onMove(perform: onMove)
+        }
+    }
+    
+    func onMove(indexSet: IndexSet, destination: Int){
+        for index in indexSet { // not sure how we can move more than one item at a time
+            let itemToMove = items[index]
+            let orderAtDestination = orderAtDestination(destination)
+            
+            // move item down
+            if itemToMove.order < orderAtDestination {
+                let start = itemToMove.order + 1
+                let end = orderAtDestination - 1
+                let itemsToDisplace = items.where { item in
+                    item.order.contains(start...end)
+                }
+                // displace upwards
+                itemsToDisplace.forEach { item in
+                    if let item = item.thaw(){ // is there a way to use $items[index].order += 1
+                        try! realm.write { // safe to catch exceptions?
+                            item.order -= 1
                         }
                     }
-                    // move item up
-                    else if itemToMove.order > orderAtDestination {
-                        let start = orderAtDestination
-                        let end = itemToMove.order - 1
-                        let itemsToDisplace = items.where { item in
-                            item.order.contains(start...end)
+                }
+                // save
+                if let itemToMove = itemToMove.thaw() {
+                    try! realm.write {
+                         itemToMove.order = end
+                    }
+                }
+            }
+            // move item up
+            else if itemToMove.order > orderAtDestination {
+                let start = orderAtDestination
+                let end = itemToMove.order - 1
+                let itemsToDisplace = items.where { item in
+                    item.order.contains(start...end)
+                }
+                // displace downwards
+                itemsToDisplace.forEach { item in
+                    if let item = item.thaw(){
+                        try! realm.write {
+                            item.order += 1
                         }
-                        // displace downwards
-                        itemsToDisplace.forEach { item in
-                            if let item = item.thaw(){
-                                try! realm.write {
-                                    item.order += 1
-                                }
-                            }
-                        }
-                        // save
-                        if let itemToMove = itemToMove.thaw() {
-                            try! realm.write {
-                                 itemToMove.order = start
-                            }
-                        }
+                    }
+                }
+                // save
+                if let itemToMove = itemToMove.thaw() {
+                    try! realm.write {
+                         itemToMove.order = start
                     }
                 }
             }
