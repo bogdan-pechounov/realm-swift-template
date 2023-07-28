@@ -10,32 +10,31 @@ import RealmSwift
 
 struct ContentView: View {
     
-    @ObservedObject var app = Realm.app
+    @StateObject var app = Realm.app
     
     var body: some View {
-        if let user = app.currentUser {
-            MainScreenSync()
-                .environment(\.realmConfiguration, user.createFlexibleConfiguration())
-                .environmentObject(app)
-        } else {
-            MainScreen()
-                .environmentObject(app)
-        }
+        MainScreenSync()
+            .environmentObject(app)
+            .if(app.currentUser) { view, user in
+                view.environment(\.realmConfiguration, user.createFlexibleConfiguration())
+            }
     }
 }
 
 struct MainScreenSync: View{
     @EnvironmentObject var app: RealmSwift.App
-    //    @Environment(\.realm) var syncedRealm
     @ObservedResults(Item.self) var syncedItems
     
     var body: some View {
         VStack {
             MainScreen()
-            Text(app.currentUser?.description ?? "not logged in")
-            DeleteAccount()
+            if let user = app.currentUser {
+                Text(user.description)
+                DeleteAccount()
+            }
         }
         .onAppear {
+            print("APPEAR")
             if let localRealm = try? Realm(), let user = app.currentUser {
                 let localItems = localRealm.objects(Item.self)
                 for item in localItems {
@@ -49,6 +48,25 @@ struct MainScreenSync: View{
                     }
                 }
             }
+        }
+    }
+}
+
+
+extension View {
+    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+    
+    @ViewBuilder func `if`<Content: View, T>(_ object: T?, transform: (Self, T) -> Content) -> some View {
+        if let object = object {
+            transform(self, object)
+        } else {
+            self
         }
     }
 }

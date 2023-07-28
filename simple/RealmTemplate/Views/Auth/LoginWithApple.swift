@@ -29,7 +29,6 @@ struct LoginWithApple: View {
                     if let idToken = credential.identityToken {
                         if let idTokenString = String(data: idToken, encoding: .utf8) {
                             loginWithApple(idToken: idTokenString)
-                            dismiss() // TODO
                         }
                     }
                 default:
@@ -54,8 +53,7 @@ struct LoginWithApple: View {
                 print("Login failed: \(error.localizedDescription)")
             case .success(let user):
                 print("Successfully logged in as user \(user)")
-                // Now logged in, do something with user
-                // Remember to dispatch to main if you are doing anything on the UI thread
+                // dismiss()
             }
         }
     }

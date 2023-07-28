@@ -19,7 +19,6 @@ struct DeleteAccount: View {
         Button(role: .destructive) {
             isPresented = true
         } label: {
-//            Text("Delete Account")
             Label("Delete Account", systemImage: "trash.fill")
         }
         .confirmationDialog("Are you sure?", isPresented: $isPresented) {
