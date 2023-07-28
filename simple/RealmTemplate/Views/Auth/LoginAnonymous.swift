@@ -27,10 +27,7 @@ struct LoginAnonymous: View {
             do {
                 let user = try await app.login(credentials: .anonymous)
                 print("Logged in as user with id: \(user.id)")
-                DispatchQueue.main.async {
-                    print("DISMISS")
-                    dismiss()
-                }
+                dismiss()
             } catch {
                 print("Failed to log in: \(error.localizedDescription)")
             }

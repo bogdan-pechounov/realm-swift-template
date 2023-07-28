@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4349A2182A733A58005158BE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4349A2172A733A57005158BE /* README.md */; };
 		4387E6D72A603FEB00F02AB7 /* RealmTemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E6D62A603FEB00F02AB7 /* RealmTemplateApp.swift */; };
 		4387E6D92A603FEB00F02AB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E6D82A603FEB00F02AB7 /* ContentView.swift */; };
 		4387E6DB2A603FEF00F02AB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4387E6DA2A603FEF00F02AB7 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4349A2172A733A57005158BE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4387E6D32A603FEB00F02AB7 /* RealmTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4387E6D62A603FEB00F02AB7 /* RealmTemplateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTemplateApp.swift; sourceTree = "<group>"; };
 		4387E6D82A603FEB00F02AB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		4387E6CA2A603FEB00F02AB7 = {
 			isa = PBXGroup;
 			children = (
+				4349A2172A733A57005158BE /* README.md */,
 				4387E6D52A603FEB00F02AB7 /* RealmTemplate */,
 				4387E6D42A603FEB00F02AB7 /* Products */,
 			);
@@ -206,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4349A2182A733A58005158BE /* README.md in Resources */,
 				4387E6DE2A603FEF00F02AB7 /* Preview Assets.xcassets in Resources */,
 				4387E6DB2A603FEF00F02AB7 /* Assets.xcassets in Resources */,
 			);
