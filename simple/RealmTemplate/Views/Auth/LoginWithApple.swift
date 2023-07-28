@@ -53,7 +53,7 @@ struct LoginWithApple: View {
                 print("Login failed: \(error.localizedDescription)")
             case .success(let user):
                 print("Successfully logged in as user \(user)")
-                // dismiss()
+                dismiss()
             }
         }
     }

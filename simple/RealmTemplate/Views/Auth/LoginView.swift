@@ -12,7 +12,7 @@ import AuthenticationServices
 struct LoginView: View {
     @EnvironmentObject var app: RealmSwift.App
     
-//    @State private var isPresented = false
+    @State private var isPresented = false
 
     var body: some View {
         if let user = app.currentUser {
@@ -22,22 +22,15 @@ struct LoginView: View {
                 Text("Logout")
             }
         } else {
-//            Button {
-//                isPresented = true
-//            } label: {
-//                Text("Login")
-//            }
-//            .sheet(isPresented: $isPresented) {
-//                LoginAnonymous()
-//                LoginWithApple()
-//            }
-            NavigationLink {
-                LoginAnonymous()
-                LoginWithApple()
+            Button {
+                isPresented = true
             } label: {
                 Text("Login")
             }
-
+            .sheet(isPresented: $isPresented) {
+                LoginAnonymous()
+                LoginWithApple()
+            }
         }
     }
     
