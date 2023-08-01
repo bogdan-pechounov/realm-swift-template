@@ -30,7 +30,8 @@ exports = function(authEvent) {
   const mongodb = context.services.get("mongodb-atlas");
   const items = mongodb.db("realm-swift-template").collection("Item");
   
-  const userId = authEvent.userId
+  const { user } = authEvent
+  const userId = user.id
   items.deleteMany({ userId })
 };
 ```

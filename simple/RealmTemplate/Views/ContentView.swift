@@ -28,10 +28,8 @@ struct MainScreenSync: View{
     var body: some View {
         VStack {
             MainScreen()
-            if let user = app.currentUser {
-                Text(user.description)
-                DeleteAccount()
-            }
+            Text(app.currentUser?.description ?? "nil")
+            DeleteAccount()
         }
         .onAppear {
             print("APPEAR")

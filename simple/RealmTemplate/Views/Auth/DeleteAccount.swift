@@ -16,21 +16,24 @@ struct DeleteAccount: View {
     @EnvironmentObject var app: RealmSwift.App
     
     var body: some View {
-        Button(role: .destructive) {
-            isPresented = true
-        } label: {
-            Label("Delete Account", systemImage: "trash.fill")
-        }
-        .confirmationDialog("Are you sure?", isPresented: $isPresented) {
+        if let user = app.currentUser {
             Button(role: .destructive) {
-                app.currentUser?.delete { error in
-                    self.error = error
-                }
+                isPresented = true
             } label: {
-                Text("Delete Account")
+                Label("Delete account", systemImage: "trash")
+                    .foregroundColor(.red)
             }
+            .confirmationDialog("Are you sure?", isPresented: $isPresented) {
+                Button(role: .destructive) {
+                    user.delete { error in
+                        self.error = error
+                    }
+                } label: {
+                    Text("Delete account")
+                }
+            }
+            .errorAlert(error: $error)
         }
-        .errorAlert(error: $error)
     }
 }
 
