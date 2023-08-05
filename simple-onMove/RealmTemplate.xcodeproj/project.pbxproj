@@ -26,6 +26,7 @@
 		4387E72B2A64C98300F02AB7 /* LoginWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E72A2A64C98300F02AB7 /* LoginWithApple.swift */; };
 		4387E72D2A64CB6E00F02AB7 /* LoginAnonymous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E72C2A64CB6E00F02AB7 /* LoginAnonymous.swift */; };
 		43D3704E2A7C759500DD7333 /* AddItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D3704D2A7C759500DD7333 /* AddItems.swift */; };
+		43D370502A7ECBFB00DD7333 /* onMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D3704F2A7ECBFB00DD7333 /* onMove.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		4387E72A2A64C98300F02AB7 /* LoginWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithApple.swift; sourceTree = "<group>"; };
 		4387E72C2A64CB6E00F02AB7 /* LoginAnonymous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnonymous.swift; sourceTree = "<group>"; };
 		43D3704D2A7C759500DD7333 /* AddItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItems.swift; sourceTree = "<group>"; };
+		43D3704F2A7ECBFB00DD7333 /* onMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onMove.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				4387E6F62A60708300F02AB7 /* Config.swift */,
 				4387E6FA2A60744200F02AB7 /* Realm.swift */,
 				4387E6EF2A6050D100F02AB7 /* RealmStudio.swift */,
+				43D3704F2A7ECBFB00DD7333 /* onMove.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				4387E7022A607F7600F02AB7 /* LoginView.swift in Sources */,
 				43D3704E2A7C759500DD7333 /* AddItems.swift in Sources */,
 				4387E7282A64485900F02AB7 /* DeleteAccount.swift in Sources */,
+				43D370502A7ECBFB00DD7333 /* onMove.swift in Sources */,
 				4387E6EE2A604C7A00F02AB7 /* AddItemView.swift in Sources */,
 				4387E6FB2A60744200F02AB7 /* Realm.swift in Sources */,
 				4387E72B2A64C98300F02AB7 /* LoginWithApple.swift in Sources */,
