@@ -24,7 +24,7 @@ struct AddItemView: View {
             
             Button {
                 // Add item to collection
-                let order = (items.max(of: \Item.order) ?? 0) + 1
+                let order = (items.max(of: \Item.order) ?? 0)
                 let item = Item(name: name, order: order, userId: app.currentUser?.id)
                 $items.append(item)
                 

@@ -25,6 +25,7 @@
 		4387E7282A64485900F02AB7 /* DeleteAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E7272A64485900F02AB7 /* DeleteAccount.swift */; };
 		4387E72B2A64C98300F02AB7 /* LoginWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E72A2A64C98300F02AB7 /* LoginWithApple.swift */; };
 		4387E72D2A64CB6E00F02AB7 /* LoginAnonymous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387E72C2A64CB6E00F02AB7 /* LoginAnonymous.swift */; };
+		43D3704E2A7C759500DD7333 /* AddItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D3704D2A7C759500DD7333 /* AddItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		4387E7292A646F2A00F02AB7 /* RealmTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealmTemplate.entitlements; sourceTree = "<group>"; };
 		4387E72A2A64C98300F02AB7 /* LoginWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithApple.swift; sourceTree = "<group>"; };
 		4387E72C2A64CB6E00F02AB7 /* LoginAnonymous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnonymous.swift; sourceTree = "<group>"; };
+		43D3704D2A7C759500DD7333 /* AddItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				4387E6F12A6052BA00F02AB7 /* ItemsView.swift */,
 				4387E6F32A6054CF00F02AB7 /* ItemView.swift */,
 				4387E6ED2A604C7A00F02AB7 /* AddItemView.swift */,
+				43D3704D2A7C759500DD7333 /* AddItems.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				4387E6F72A60708300F02AB7 /* Config.swift in Sources */,
 				4387E6F22A6052BA00F02AB7 /* ItemsView.swift in Sources */,
 				4387E7022A607F7600F02AB7 /* LoginView.swift in Sources */,
+				43D3704E2A7C759500DD7333 /* AddItems.swift in Sources */,
 				4387E7282A64485900F02AB7 /* DeleteAccount.swift in Sources */,
 				4387E6EE2A604C7A00F02AB7 /* AddItemView.swift in Sources */,
 				4387E6FB2A60744200F02AB7 /* Realm.swift in Sources */,

@@ -35,6 +35,11 @@ struct MainScreen: View {
                     ToolbarItem(placement: .navigationBarLeading) {
                         LoginView()
                     }
+                    
+                    // Add multiple
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        AddItems()
+                    }
                 }
                 .sheet(isPresented: $showAddItem) {
                     // Sheet
